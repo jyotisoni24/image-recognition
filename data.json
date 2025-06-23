@@ -1,0 +1,24 @@
+{
+    "Class 1": {
+      "recyclable": true,
+      "plastic": true,
+      "plant_based": false,
+      "carbon_footprint": "High",
+      "notes": "Plastic bottle, high sugar"
+    },
+    "Class 2": {
+      "recyclable": true,
+      "plastic": true,
+      "plant_based": false,
+      "carbon_footprint": "Medium",
+      "notes": "Recyclable PET bottle"
+    },
+    "Class 3": {
+      "recyclable": true,
+      "plastic": false,
+      "plant_based": true,
+      "carbon_footprint": "Low",
+      "notes": "Plant-based milk alternative"
+    }
+  }
+  

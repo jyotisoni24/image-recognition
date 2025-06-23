@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sustainability Scanner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 20px; }
+    video, canvas { width: 90%; max-width: 320px; margin: 10px auto; }
+    button { padding: 10px 20px; font-size: 18px; }
+    #result { margin-top: 20px; text-align: left; background: #f0f0f0; padding: 15px; border-radius: 10px; max-width: 350px; margin-left: auto; margin-right: auto; }
+  </style>
+</head>
+<body>
+
+  <h2>♻️ Sustainability Scanner</h2>
+  <video id="video" autoplay playsinline></video>
+  <button id="snap">📸 Scan Product</button>
+  <canvas id="canvas" width="320" height="240" style="display:none;"></canvas>
+  <div id="result"></div>
+
+  <!-- ✅ Libraries: TFJS and TeachableMachine -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.21.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+
+  <!-- ✅ Your custom script -->
+  <script src="script.js"></script>
+
+</body>
+</html>
