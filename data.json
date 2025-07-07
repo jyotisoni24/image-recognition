@@ -1,24 +1,184 @@
 {
-    "Class 1": {
-      "recyclable": true,
-      "plastic": true,
-      "plant_based": false,
-      "carbon_footprint": "High",
-      "notes": "Plastic bottle, high sugar"
+  "Soaps": {
+    "sustainability_score": 68,
+    "color_code": "Green",
+    "esg": {
+      "environmental": 72,
+      "social": 65,
+      "governance": 67
     },
-    "Class 2": {
-      "recyclable": true,
-      "plastic": true,
-      "plant_based": false,
-      "carbon_footprint": "Medium",
-      "notes": "Recyclable PET bottle"
+    "transport_impact": "Medium Emission (130 kg CO₂e)",
+    "transport_mode": "Truck | 900 km",
+    "badges": ["Low Carbon Leader", "EcoVadis Certified"],
+    "last_updated": "26 June 2025",
+    "recyclable": true,
+    "plastic": true,
+    "plant_based": false,
+    "carbon_footprint": "Medium",
+    "notes": "Soap packet in recyclable plastic wrapping"
+  },
+  "Lentils": {
+    "sustainability_score": 82,
+    "color_code": "Green",
+    "esg": {
+      "environmental": 88,
+      "social": 78,
+      "governance": 80
     },
-    "Class 3": {
-      "recyclable": true,
-      "plastic": false,
-      "plant_based": true,
-      "carbon_footprint": "Low",
-      "notes": "Plant-based milk alternative"
-    }
+    "transport_impact": "Low Emission (65 kg CO₂e)",
+    "transport_mode": "Rail | 1,200 km",
+    "badges": ["Plant-Based Protein", "Low Carbon Leader", "EcoVadis Certified"],
+    "last_updated": "26 June 2025",
+    "recyclable": true,
+    "plastic": true,
+    "plant_based": true,
+    "carbon_footprint": "Low",
+    "notes": "Lentils in recyclable plastic packaging; plant-based protein source with low environmental impact."
+  },
+  "Spices": {
+    "sustainability_score": 76,
+    "color_code": "Green",
+    "esg": {
+      "environmental": 80,
+      "social": 72,
+      "governance": 75
+    },
+    "transport_impact": "Medium Emission (95 kg CO₂e)",
+    "transport_mode": "Truck | 1,100 km",
+    "badges": ["Plant-Based", "EcoVadis Certified"],
+    "last_updated": "26 June 2025",
+    "recyclable": true,
+    "plastic": true,
+    "plant_based": true,
+    "carbon_footprint": "Low",
+    "notes": "Spices in recyclable plastic pouches; plant-based, low environmental impact."
+  },
+  "Ice Cream": {
+    "sustainability_score": 59,
+    "color_code": "Yellow",
+    "esg": {
+      "environmental": 62,
+      "social": 58,
+      "governance": 60
+    },
+    "transport_impact": "High Emission (210 kg CO₂e)",
+    "transport_mode": "Refrigerated Truck | 1,300 km",
+    "badges": ["Cold Chain", "EcoVadis Certified"],
+    "last_updated": "26 June 2025",
+    "recyclable": false,
+    "plastic": true,
+    "plant_based": false,
+    "carbon_footprint": "High",
+    "notes": "Ice cream in plastic-coated packaging; requires cold chain transport, higher emissions."
+  },
+  "Chips ": {
+    "sustainability_score": 62,
+    "color_code": "Yellow",
+    "esg": {
+      "environmental": 64,
+      "social": 60,
+      "governance": 62
+    },
+    "transport_impact": "Medium Emission (140 kg CO₂e)",
+    "transport_mode": "Truck | 1,000 km",
+    "badges": [
+      "Recyclable Packaging (pilot regions)",
+      "EcoVadis Certified"
+    ],
+    "last_updated": "26 June 2025",
+    "recyclable": false,
+    "plastic": true,
+    "plant_based": false,
+    "carbon_footprint": "Medium",
+    "notes": "Most chips are sold in multi-layer plastic/aluminum bags that are not recyclable in most regions, but some brands are piloting recyclable or renewable plastic packaging. Packaging contributes significantly to the product's footprint."
+  },
+  "Cheese": {
+    "sustainability_score": 66,
+    "color_code": "Yellow",
+    "esg": {
+      "environmental": 68,
+      "social": 62,
+      "governance": 65
+    },
+    "transport_impact": "High Emission (190 kg CO₂e)",
+    "transport_mode": "Refrigerated Truck | 1,200 km",
+    "badges": [
+      "Recyclable Film (select products)",
+      "Plant-Based Packaging (pilot)",
+      "EcoVadis Certified"
+    ],
+    "last_updated": "26 June 2025",
+    "recyclable": true,
+    "plastic": true,
+    "plant_based": false,
+    "carbon_footprint": "High",
+    "notes": "Cheese is commonly packaged in plastic film or pouches; some brands use recyclable or plant-based films. Cold chain transport increases emissions. Packaging innovation is ongoing to improve recyclability and reduce plastic use."
+  },
+  "Soft Drinks": {
+    "sustainability_score": 66,
+    "color_code": "Yellow",
+    "esg": {
+      "environmental": 68,
+      "social": 62,
+      "governance": 65
+    },
+    "transport_impact": "High Emission (185 kg CO₂e)",
+    "transport_mode": "Truck + Rail | 1,500 km",
+    "badges": [
+      "100% Recyclable Bottle (select brands)",
+      "rPET Content",
+      "EcoVadis Certified"
+    ],
+    "last_updated": "26 June 2025",
+    "recyclable": true,
+    "plastic": true,
+    "plant_based": false,
+    "carbon_footprint": "High",
+    "notes": "Most soft drinks are packaged in PET bottles, with leading brands shifting toward 100% recyclable and recycled PET (rPET) content. However, collection and recycling rates vary by region, and plastic waste remains a major concern. Some brands are piloting paper-based and plant-based bottles."
+  },
+  "Milk": {
+    "sustainability_score": 73,
+    "color_code": "Green",
+    "esg": {
+      "environmental": 78,
+      "social": 68,
+      "governance": 72
+    },
+    "transport_impact": "Medium Emission (110 kg CO₂e)",
+    "transport_mode": "Truck | 800 km",
+    "badges": [
+      "Recyclable Pouch",
+      "Plant-Based/Biodegradable Packaging (pilot)",
+      "EcoVadis Certified"
+    ],
+    "last_updated": "26 June 2025",
+    "recyclable": true,
+    "plastic": true,
+    "plant_based": false,
+    "carbon_footprint": "Medium",
+    "notes": "Milk is commonly sold in lightweight, recyclable plastic pouches. Some dairies are piloting plant-based or biodegradable packaging. Cartons offer lower carbon footprint but are less common in India. The majority of emissions come from milk production, not packaging."
+  },
+  "Milkshake": {
+    "sustainability_score": 79,
+    "color_code": "Green",
+    "esg": {
+      "environmental": 85,
+      "social": 75,
+      "governance": 78
+    },
+    "transport_impact": "Low Emission (58 kg CO₂e)",
+    "transport_mode": "Truck + Rail | 1,000 km",
+    "badges": [
+      "Carton with Plant-Based Polymers",
+      "FSC Certified",
+      "Carbon Neutral Packaging (select lines)",
+      "EcoVadis Certified"
+    ],
+    "last_updated": "26 June 2025",
+    "recyclable": true,
+    "plastic": false,
+    "plant_based": true,
+    "carbon_footprint": "Low",
+    "notes": "Tetrapack cartons are made primarily from paperboard (renewable), often with plant-based plastic layers and caps. Compared to bottles, they have the lowest carbon footprint among beverage packaging, are FSC certified, and are increasingly carbon neutral. Recycling infrastructure is improving, but collection rates vary by region."
   }
-  
+}

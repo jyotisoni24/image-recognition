@@ -1,3 +1,5 @@
+
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +10,40 @@
     body { font-family: sans-serif; text-align: center; padding: 20px; }
     video, canvas { width: 90%; max-width: 320px; margin: 10px auto; }
     button { padding: 10px 20px; font-size: 18px; }
-    #result { margin-top: 20px; text-align: left; background: #f0f0f0; padding: 15px; border-radius: 10px; max-width: 350px; margin-left: auto; margin-right: auto; }
+    #result { margin-top: 20px; text-align: left; max-width: 370px; margin-left: auto; margin-right: auto; }
+
+    /* Sustainability Card Styles */
+    .green-card {
+      border-radius: 15px;
+      box-shadow: 0 4px 16px rgba(60,180,80,0.13);
+      padding: 20px;
+      margin: 0 auto;
+      max-width: 370px;
+      text-align: left;
+      border: 2px solid #6ad37a;
+      margin-top: 20px;
+      font-size: 1.05em;
+    }
+    .green-card .esg span {
+      margin-right: 12px;
+      font-weight: 500;
+    }
+    .badge {
+      display: inline-block;
+      background: #6ad37a;
+      color: #fff;
+      border-radius: 12px;
+      padding: 4px 12px;
+      margin: 3px 3px 6px 0;
+      font-size: 0.92em;
+      font-weight: bold;
+      letter-spacing: 0.02em;
+    }
+    .last-updated {
+      font-size: 0.93em;
+      color: #666;
+      margin-top: 8px;
+    }
   </style>
 </head>
 <body>
@@ -19,12 +54,305 @@
   <canvas id="canvas" width="320" height="240" style="display:none;"></canvas>
   <div id="result"></div>
 
-  <!-- ✅ Libraries: TFJS and TeachableMachine -->
+ ✅ Libraries: TFJS and TeachableMachine 
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.21.0/dist/tf.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
 
-  <!-- ✅ Your custom script -->
+✅ Your custom script 
   <script src="script.js"></script>
 
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sustainability Scanner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
+    .video-bg-container {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      width: 100vw; height: 100vh;
+      background: #000;
+      z-index: 1;
+      overflow: hidden;
+    }
+    #video {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: 1;
+      background: #000;
+    }
+    .overlay-content {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      width: 100vw; height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      pointer-events: none;
+      z-index: 2;
+    }
+    .scanner-header {
+      margin-top: 32px;
+      font-size: 2.3em;
+      color: #fff;
+      text-shadow: 0 2px 8px #222;
+      pointer-events: auto;
+    }
+    #snap {
+      margin-top: 18px;
+      padding: 12px 28px;
+      font-size: 1.2em;
+      border-radius: 8px;
+      border: none;
+      background: #6ad37a;
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(60,180,80,0.13);
+      cursor: pointer;
+      pointer-events: auto;
+    }
+    #canvas {
+      display: none;
+    }
+    #result {
+      position: relative;
+      margin-top: 36px;
+      z-index: 3;
+      pointer-events: auto;
+    }
+    .green-card {
+      border-radius: 15px;
+      box-shadow: 0 4px 16px rgba(60,180,80,0.13);
+      padding: 20px;
+      margin: 0 auto;
+      max-width: 370px;
+      text-align: left;
+      border: 2px solid #6ad37a;
+      background: #e0fbe0;
+      font-size: 1.05em;
+    }
+    .green-card .esg span {
+      margin-right: 12px;
+      font-weight: 500;
+    }
+    .badge {
+      display: inline-block;
+      background: #6ad37a;
+      color: #fff;
+      border-radius: 12px;
+      padding: 4px 12px;
+      margin: 3px 3px 6px 0;
+      font-size: 0.92em;
+      font-weight: bold;
+      letter-spacing: 0.02em;
+    }
+    .last-updated {
+      font-size: 0.93em;
+      color: #666;
+      margin-top: 8px;
+    }
+    @media (max-width: 600px) {
+      .green-card {
+        max-width: 96vw;
+        padding: 10px;
+        font-size: 0.98em;
+      }
+      .scanner-header {
+        font-size: 1.3em;
+      }
+      #snap {
+        font-size: 1em;
+        padding: 10px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="video-bg-container">
+    <video id="video" autoplay playsinline></video>
+  </div>
+  <div class="overlay-content">
+    <div class="scanner-header">♻️ Sustainability Scanner</div>
+    <button id="snap">📸 Scan Product</button>
+    <canvas id="canvas" width="320" height="240"></canvas>
+    <div id="result"></div>
+  </div>
+
+   ✅ Libraries: TFJS and TeachableMachine 
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.21.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+  ✅ Your custom script 
+  <script src="script.js"></script>
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sustainability Scanner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background: #f8f8f8;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+    }
+    .scanner-header {
+      margin-top: 32px;
+      font-size: 2.3em;
+      color: #222;
+      text-shadow: 0 2px 8px #fff8;
+    }
+    .main-flex {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 32px;
+      margin: 40px auto 0 auto;
+      max-width: 900px;
+      width: 100%;
+    }
+    .video-container {
+      width: 400px;
+      max-width: 95vw;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(60,180,80,0.13);
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #video {
+      width: 100%;
+      height: auto;
+      display: block;
+      background: #000;
+    }
+    #snap {
+      margin-top: 18px;
+      padding: 12px 28px;
+      font-size: 1.2em;
+      border-radius: 8px;
+      border: none;
+      background: #6ad37a;
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(60,180,80,0.13);
+      cursor: pointer;
+    }
+    #canvas {
+      display: none;
+    }
+    #result {
+      min-width: 370px;
+      max-width: 400px;
+      margin-top: 0;
+      text-align: left;
+    }
+    .green-card {
+      border-radius: 15px;
+      box-shadow: 0 4px 16px rgba(60,180,80,0.13);
+      padding: 20px;
+      margin: 0;
+      max-width: 370px;
+      text-align: left;
+      border: 2px solid #6ad37a;
+      background: #e0fbe0;
+      font-size: 1.05em;
+    }
+    .green-card .esg span {
+      margin-right: 12px;
+      font-weight: 500;
+    }
+    .badge {
+      display: inline-block;
+      background: #6ad37a;
+      color: #fff;
+      border-radius: 12px;
+      padding: 4px 12px;
+      margin: 3px 3px 6px 0;
+      font-size: 0.92em;
+      font-weight: bold;
+      letter-spacing: 0.02em;
+    }
+    .last-updated {
+      font-size: 0.93em;
+      color: #666;
+      margin-top: 8px;
+    }
+    @media (max-width: 900px) {
+      .main-flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+      }
+      #result {
+        min-width: unset;
+        max-width: 98vw;
+      }
+      .video-container {
+        width: 98vw;
+      }
+    }
+    @media (max-width: 600px) {
+      .green-card {
+        max-width: 96vw;
+        padding: 10px;
+        font-size: 0.98em;
+      }
+      .scanner-header {
+        font-size: 1.3em;
+      }
+      #snap {
+        font-size: 1em;
+        padding: 10px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scanner-header">♻️ Sustainability Scanner</div>
+  <div class="main-flex">
+    <div class="video-container">
+      <video id="video" autoplay playsinline></video>
+    </div>
+    <div id="result"></div>
+  </div>
+  <button id="snap">📸 Scan Product</button>
+  <canvas id="canvas" width="320" height="240" style="display:none;"></canvas>
+
+  <!-- ✅ Libraries: TFJS and TeachableMachine -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.21.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+  <!-- ✅ Your custom script -->
+  <script src="script.js"></script>
 </body>
 </html>
