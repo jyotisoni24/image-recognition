@@ -4,7 +4,7 @@ const context = canvas.getContext("2d");
 const snapBtn = document.getElementById("snap");
 const resultDiv = document.getElementById("result");
 
-const modelURL = "/model/";
+const modelURL = "model/";
 let model;
 let maxPredictions;
 
