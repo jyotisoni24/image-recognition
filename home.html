@@ -4,8 +4,45 @@
   <meta charset="UTF-8" />
   <title>GreenScan | Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    /* Media Queries for responsiveness */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+      }
+
+      nav ul {
+        flex-direction: column !important;
+        gap: 1rem !important;
+        margin-top: 1rem;
+      }
+
+      section h1 {
+        font-size: 2rem !important;
+      }
+
+      section h2 {
+        font-size: 1.5rem !important;
+      }
+
+      section p, section a {
+        font-size: 1rem !important;
+      }
+
+      .modal-content {
+        width: 90% !important;
+      }
+
+      .how-it-works-card {
+        width: 90% !important;
+      }
+    }
+  </style>
 </head>
-<body style="margin:0; font-family: 'Segoe UI', sans-serif; background-color:#f4fff6; color:#222;">
+
+<body style="margin:0; font-family:'Segoe UI', sans-serif; background-color:#f4fff6; color:#222;">
 
   <!-- Navbar -->
   <nav style="display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; background:#c8facc; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
@@ -14,6 +51,7 @@
       <li><a href="home.html" style="text-decoration:none; color:#2e7d32; font-weight:500;">Home</a></li>
       <li><a href="http://localhost:8000/" style="text-decoration:none; color:#2e7d32; font-weight:500;">Sustainability Scanner</a></li>
       <li><a href="rewards.html" style="text-decoration:none; color:#2e7d32; font-weight:500;">My Rewards</a></li>
+      <li><a href="bills.html" style="text-decoration:none; color:#2e7d32; font-weight:500;">My Bills</a></li>
       <li><button onclick="openLogin()" style="background:#43a047; border:none; color:white; padding:0.5rem 1rem; border-radius:6px; cursor:pointer;">Login / Sign Up</button></li>
     </ul>
   </nav>
@@ -39,22 +77,22 @@
       Get Started
     </a>
   </section>
-   
+
   <!-- How It Works Section -->
   <section style="padding:4rem 2rem; background:#ffffff;">
     <h2 style="text-align:center; font-size:2rem; color:#2e7d32; margin-bottom:2rem;">How It Works</h2>
     <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:2rem; text-align:center;">
-      <div style="background:#f4fff6; padding:2rem; border-radius:10px; width:260px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+      <div class="how-it-works-card" style="background:#f4fff6; padding:2rem; border-radius:10px; width:260px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
         <div style="font-size:2.5rem;">📸</div>
         <h3 style="color:#1b5e20;">1. Scan Product</h3>
         <p>Point your camera and capture the product to get details instantly.</p>
       </div>
-      <div style="background:#f4fff6; padding:2rem; border-radius:10px; width:260px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+      <div class="how-it-works-card" style="background:#f4fff6; padding:2rem; border-radius:10px; width:260px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
         <div style="font-size:2.5rem;">📊</div>
         <h3 style="color:#1b5e20;">2. Analyze Impact</h3>
         <p>Get real-time insights like carbon emissions & sustainability score.</p>
       </div>
-      <div style="background:#f4fff6; padding:2rem; border-radius:10px; width:260px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+      <div class="how-it-works-card" style="background:#f4fff6; padding:2rem; border-radius:10px; width:260px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
         <div style="font-size:2.5rem;">🏆</div>
         <h3 style="color:#1b5e20;">3. Earn Rewards</h3>
         <p>Track your green actions and earn eco-points and badges.</p>
@@ -63,34 +101,42 @@
   </section>
 
   <!-- About Section -->
-<section style="padding:4rem 2rem; background:#ffffff; text-align:center;">
-  <h2 style="font-size:2.2rem; color:#2e7d32; margin-bottom:1rem;">About GreenScan</h2>
-  <p style="font-size:1.1rem; max-width:700px; margin:auto; color:#4caf50; line-height:1.6;">
-    GreenScan is on a mission to make sustainability simple, accessible, and rewarding. We empower conscious consumers by providing instant environmental insights for everyday products.
-    <br/><br/>
-    Our platform analyzes items in real-time to reveal their carbon footprint, sustainability scores, and overall eco-impact — helping you shop smarter and greener.
-    <br/><br/>
-    Whether you're reducing waste, tracking emissions, or just starting out — GreenScan makes your green journey effortless and rewarding.
-  </p>
-</section>
+  <section style="padding:4rem 2rem; background:#ffffff; text-align:center;">
+    <h2 style="font-size:2.2rem; color:#2e7d32; margin-bottom:1rem;">About GreenScan</h2>
+    <p style="font-size:1.1rem; max-width:700px; margin:auto; color:#4caf50; line-height:1.6;">
+      GreenScan is on a mission to make sustainability simple, accessible, and rewarding. We empower conscious consumers by providing instant environmental insights for everyday products.
+      <br/><br/>
+      Our platform analyzes items in real-time to reveal their carbon footprint, sustainability scores, and overall eco-impact — helping you shop smarter and greener.
+      <br/><br/>
+      Whether you're reducing waste, tracking emissions, or just starting out — GreenScan makes your green journey effortless and rewarding.
+    </p>
+  </section>
 
-  <!-- Footer -->
-   
+  <!-- Modal Trigger -->
+  <button onclick="openLogin()" style="margin:2rem auto; display:block; background:#388e3c; color:white; border:none; padding:0.8rem 1.2rem; border-radius:6px; cursor:pointer;">Open Login / Signup</button>
+
   <!-- Login/Signup Modal -->
-  <div id="loginModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); justify-content:center; align-items:center;">
-    <div style="background:white; padding:2rem; border-radius:8px; width:320px; text-align:center; position:relative;">
-      <div style="display:flex; justify-content:space-around; margin-bottom:1rem;">
-        <button onclick="showTab('login')" style="flex:1; background:none; border:none; font-weight:bold; padding:0.5rem; cursor:pointer; color:#2e7d32;">Login</button>
-        <button onclick="showTab('signup')" style="flex:1; background:none; border:none; font-weight:bold; padding:0.5rem; cursor:pointer; color:#2e7d32;">Sign Up</button>
-      </div>
+  <div id="loginModal"
+       onclick="closeModal()"
+       style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; 
+              background:rgba(0,0,0,0.5); justify-content:center; align-items:center; z-index:1000;">
+
+    <!-- Modal Content Box -->
+    <div onclick="event.stopPropagation()"
+         class="modal-content"
+         style="background:white; padding:2rem; border-radius:10px; width:300px; position:relative;">
+
+      <span onclick="closeModal()"
+            style="position:absolute; top:10px; right:15px; cursor:pointer; font-weight:bold; font-size:20px;">&times;</span>
 
       <!-- Login Form -->
-      <div id="loginForm">
+      <div id="loginForm" style="display:block;">
         <h3 style="color:#2e7d32;">Login</h3>
         <input id="loginEmail" type="email" placeholder="Email" style="width:100%; padding:0.5rem; margin-bottom:0.5rem;" />
         <input id="loginPassword" type="password" placeholder="Password" style="width:100%; padding:0.5rem; margin-bottom:0.5rem;" />
         <button onclick="handleLogin()" style="background:#43a047; color:white; border:none; padding:0.6rem 1rem; border-radius:6px; cursor:pointer; width:100%;">Login</button>
         <p id="loginError" style="color:red;"></p>
+        <p style="text-align:center;">Don't have an account? <a href="#" onclick="showTab('signup')">Sign Up</a></p>
       </div>
 
       <!-- Signup Form -->
@@ -100,17 +146,21 @@
         <input id="signupPassword" type="password" placeholder="Password (min 6 chars)" style="width:100%; padding:0.5rem; margin-bottom:0.5rem;" />
         <button onclick="handleSignup()" style="background:#43a047; color:white; border:none; padding:0.6rem 1rem; border-radius:6px; cursor:pointer; width:100%;">Sign Up</button>
         <p id="signupError" style="color:red;"></p>
+        <p style="text-align:center;">Already have an account? <a href="#" onclick="showTab('login')">Login</a></p>
       </div>
+
     </div>
   </div>
 
-  <!-- Footer -->
-   
   <!-- Script -->
   <script>
     function openLogin() {
       document.getElementById('loginModal').style.display = 'flex';
       showTab('login');
+    }
+
+    function closeModal() {
+      document.getElementById('loginModal').style.display = 'none';
     }
 
     function showTab(tab) {
@@ -137,7 +187,7 @@
       localStorage.setItem('userEmail', email);
       localStorage.setItem('userPassword', password);
       alert("Signup successful!");
-      document.getElementById('loginModal').style.display = 'none';
+      closeModal();
     }
 
     function handleLogin() {
@@ -149,16 +199,16 @@
 
       if (email === savedEmail && password === savedPassword) {
         alert("Login successful!");
-        document.getElementById('loginModal').style.display = 'none';
+        closeModal();
       } else {
         document.getElementById('loginError').innerText = "Invalid credentials.";
       }
     }
   </script>
+
   <!-- Footer -->
   <footer style="text-align:center; padding:1rem; background:#c8facc; color:#2e7d32;">
     © 2025 GreenScan. All rights reserved.
   </footer>
-
 </body>
 </html>

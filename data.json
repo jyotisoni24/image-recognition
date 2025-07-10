@@ -15,7 +15,7 @@
     "plastic": true,
     "plant_based": false,
     "carbon_footprint": "Medium",
-    "notes": "Soap packet in recyclable plastic wrapping"
+    "notes": "Choose the refill pack to reduce CO₂ impact by 40%."
   },
   "Lentils": {
     "sustainability_score": 82,
@@ -33,7 +33,7 @@
     "plastic": true,
     "plant_based": true,
     "carbon_footprint": "Low",
-    "notes": "Lentils in recyclable plastic packaging; plant-based protein source with low environmental impact."
+    "notes": "Choose paper-pack of Lentils to cut plastic by 30%."
   },
   "Spices": {
     "sustainability_score": 76,
@@ -51,7 +51,7 @@
     "plastic": true,
     "plant_based": true,
     "carbon_footprint": "Low",
-    "notes": "Spices in recyclable plastic pouches; plant-based, low environmental impact."
+    "notes": "Use empty spice pouch to store dry masalas or kitchen knick-knacks."
   },
   "Ice Cream": {
     "sustainability_score": 59,
@@ -69,7 +69,7 @@
     "plastic": true,
     "plant_based": false,
     "carbon_footprint": "High",
-    "notes": "Ice cream in plastic-coated packaging; requires cold chain transport, higher emissions."
+    "notes": "Plastic-coated tubs go in general waste — avoid rinsing into sink."
   },
   "Chips ": {
     "sustainability_score": 62,
@@ -90,7 +90,7 @@
     "plastic": true,
     "plant_based": false,
     "carbon_footprint": "Medium",
-    "notes": "Most chips are sold in multi-layer plastic/aluminum bags that are not recyclable in most regions, but some brands are piloting recyclable or renewable plastic packaging. Packaging contributes significantly to the product's footprint."
+    "notes": "Check store bin for pilot-pack drop-off — close the loop"
   },
   "Cheese": {
     "sustainability_score": 66,
@@ -112,7 +112,7 @@
     "plastic": true,
     "plant_based": false,
     "carbon_footprint": "High",
-    "notes": "Cheese is commonly packaged in plastic film or pouches; some brands use recyclable or plant-based films. Cold chain transport increases emissions. Packaging innovation is ongoing to improve recyclability and reduce plastic use."
+    "notes": "Clean film before disposal — oily film can’t be recycled."
   },
   "Soft Drinks": {
     "sustainability_score": 66,
@@ -134,7 +134,7 @@
     "plastic": true,
     "plant_based": false,
     "carbon_footprint": "High",
-    "notes": "Most soft drinks are packaged in PET bottles, with leading brands shifting toward 100% recyclable and recycled PET (rPET) content. However, collection and recycling rates vary by region, and plastic waste remains a major concern. Some brands are piloting paper-based and plant-based bottles."
+    "notes": "empty fully, crush, cap on → drop in recycling bin. Avoid rinsing."
   },
   "Milk": {
     "sustainability_score": 73,
@@ -156,7 +156,7 @@
     "plastic": true,
     "plant_based": false,
     "carbon_footprint": "Medium",
-    "notes": "Milk is commonly sold in lightweight, recyclable plastic pouches. Some dairies are piloting plant-based or biodegradable packaging. Cartons offer lower carbon footprint but are less common in India. The majority of emissions come from milk production, not packaging."
+    "notes": ":If no recycle bin, knot pouch & dispose dry with mixed waste — don’t flush."
   },
   "Milkshake": {
     "sustainability_score": 79,
@@ -179,6 +179,6 @@
     "plastic": false,
     "plant_based": true,
     "carbon_footprint": "Low",
-    "notes": "Tetrapack cartons are made primarily from paperboard (renewable), often with plant-based plastic layers and caps. Compared to bottles, they have the lowest carbon footprint among beverage packaging, are FSC certified, and are increasingly carbon neutral. Recycling infrastructure is improving, but collection rates vary by region."
+    "notes": "If not locally recyclable, save & return to drop-box"
   }
 }

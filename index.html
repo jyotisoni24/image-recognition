@@ -214,22 +214,56 @@
       height: 100%;
       margin: 0;
       padding: 0;
-      font-family: sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       background: #f8f8f8;
+      color: #222;
     }
-    /* body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      min-height: 100vh;
-    } */
+
     .scanner-header {
       margin-top: 32px;
       font-size: 2.3em;
       color: #222;
       text-shadow: 0 2px 8px #fff8;
+      text-align: center;
+      font-weight: bold;
+      padding: 1.5rem 1rem;
+      background-color: #d7fbe0;
+      color: #1b5e20;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #c8facc;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a, nav button {
+      text-decoration: none;
+      color: #2e7d32;
+      font-weight: 500;
+    }
+
+    nav button {
+      background: #43a047;
+      border: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
     .main-flex {
       display: flex;
       justify-content: center;
@@ -238,7 +272,10 @@
       margin: 40px auto 0 auto;
       max-width: 900px;
       width: 100%;
+      flex-wrap: wrap;
+      padding: 2rem;
     }
+
     .video-container {
       width: 400px;
       max-width: 95vw;
@@ -249,218 +286,205 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      border: 4px solid #a5d6a7;
     }
+
     #video {
       width: 100%;
       height: auto;
       display: block;
       background: #000;
     }
-    #snap {
-      margin-top: 18px;
-      padding: 12px 28px;
-      font-size: 1.2em;
-      border-radius: 8px;
-      border: none;
-      background: #6ad37a;
-      color: #fff;
-      box-shadow: 0 2px 8px rgba(60,180,80,0.13);
-      cursor: pointer;
+
+    #result {
+      min-width: 280px;
+      max-width: 350px;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      color: #388e3c;
+      font-size: 1.1rem;
     }
+
+    #snap {
+      background-color: #43a047;
+      color: white;
+      padding: 0.8rem 2rem;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
     #canvas {
       display: none;
     }
-    #result {
-      min-width: 370px;
-      max-width: 400px;
-      margin-top: 0;
-      text-align: left;
+
+    /* Modal styles */
+    #loginModal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
     }
-    .green-card {
-      border-radius: 15px;
-      box-shadow: 0 4px 16px rgba(60,180,80,0.13);
-      padding: 20px;
-      margin: 0;
-      max-width: 370px;
-      text-align: left;
-      border: 2px solid #6ad37a;
-      background: #e0fbe0;
-      font-size: 1.05em;
+
+    .modal-content {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      width: 300px;
+      position: relative;
     }
-    .green-card .esg span {
-      margin-right: 12px;
-      font-weight: 500;
+
+    .modal-content input {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 0.5rem;
     }
-    .badge {
-      display: inline-block;
-      background: #6ad37a;
-      color: #fff;
-      border-radius: 12px;
-      padding: 4px 12px;
-      margin: 3px 3px 6px 0;
-      font-size: 0.92em;
-      font-weight: bold;
-      letter-spacing: 0.02em;
+
+    .modal-content button {
+      background: #43a047;
+      color: white;
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
     }
-    .last-updated {
-      font-size: 0.93em;
-      color: #666;
-      margin-top: 8px;
+
+    .modal-content a {
+      color: #2e7d32;
+      cursor: pointer;
     }
+
+    /* Responsive */
     @media (max-width: 900px) {
       .main-flex {
         flex-direction: column;
         align-items: center;
         gap: 16px;
       }
-      #result {
-        min-width: unset;
-        max-width: 98vw;
-      }
-      .video-container {
-        width: 98vw;
-      }
     }
+
     @media (max-width: 600px) {
-      .green-card {
-        max-width: 96vw;
-        padding: 10px;
-        font-size: 0.98em;
-      }
       .scanner-header {
-        font-size: 1.3em;
+        font-size: 1.5rem;
       }
       #snap {
-        font-size: 1em;
+        font-size: 1rem;
         padding: 10px 18px;
+      }
+      .modal-content {
+        width: 90%;
       }
     }
   </style>
 </head>
-<body style="margin:0; font-family: 'Segoe UI', sans-serif; background-color:#f4fff6; color:#222;">
-  <nav style="display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; background:#c8facc; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+<body>
+  <nav>
     <div style="font-size:1.5rem; font-weight:bold; color:#2e7d32;">🌱 GreenScan</div>
-    <ul style="list-style:none; display:flex; gap:1.5rem; margin:0; padding:0;">
-      <li><a href="home.html" style="text-decoration:none; color:#2e7d32; font-weight:500;">Home</a></li>
-      <li><a href="http://localhost:8000/" style="text-decoration:none; color:#2e7d32; font-weight:500;">Sustainability Scanner</a></li>
-      <li><a href="rewards.html" style="text-decoration:none; color:#2e7d32; font-weight:500;">My Rewards</a></li>
-      <li><button onclick="openLogin()" style="background:#43a047; border:none; color:white; padding:0.5rem 1rem; border-radius:6px; cursor:pointer;">Login / Sign Up</button></li>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="http://localhost:8000/">Sustainability Scanner</a></li>
+      <li><a href="rewards.html">My Rewards</a></li>
+      <li><a href="bills.html">My Bills</a></li>
+      <li><button onclick="openLogin()">Login / Sign Up</button></li>
     </ul>
   </nav>
 
-  <div class="scanner-header" style="text-align:center; font-size:2rem; font-weight:bold; padding:1.5rem 1rem; background-color:#d7fbe0; color:#1b5e20; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-    ♻️ Sustainability Scanner
+  <div class="scanner-header">♻️ Sustainability Scanner</div>
+
+  <div class="main-flex">
+    <div class="video-container">
+      <video id="video" autoplay playsinline></video>
+    </div>
+    <div id="result">🔍 Scan result will appear here.</div>
   </div>
 
-  <!-- Main Flex Container -->
-  <div class="main-flex" style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:2rem; padding:2rem;">
-    
-    <!-- Video Preview Box -->
-    <div class="video-container" style="border:4px solid #a5d6a7; border-radius:12px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
-      <video id="video" autoplay playsinline style="width:320px; height:240px; display:block;"></video>
-    </div>
-
-    <!-- Scan Result Box -->
-    <div id="result" style="min-width:280px; max-width:350px; background:white; padding:1.5rem; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1); color:#388e3c; font-size:1.1rem;">
-      🔍 Scan result will appear here.
-    </div>
-  </div>
-
-  <!-- Scan Button -->
   <div style="text-align:center; padding-bottom:2rem;">
-    <button id="snap" style="background-color:#43a047; color:white; padding:0.8rem 2rem; font-size:1.1rem; border:none; border-radius:10px; cursor:pointer; box-shadow:0 3px 6px rgba(0,0,0,0.1); transition:transform 0.2s;">
-      📸 Scan Product
-    </button>
+    <button id="snap">📸 Scan Product</button>
   </div>
 
-  <!-- Hidden Canvas -->
-  <canvas id="canvas" width="320" height="240" style="display:none;"></canvas>
-  <!-- ✅ Libraries: TFJS and TeachableMachine -->
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.21.0/dist/tf.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
-  <!-- Login/Signup Modal -->
-  <div id="loginModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); justify-content:center; align-items:center;">
-    <div style="background:white; padding:2rem; border-radius:8px; width:320px; text-align:center; position:relative;">
-      <div style="display:flex; justify-content:space-around; margin-bottom:1rem;">
-        <button onclick="showTab('login')" style="flex:1; background:none; border:none; font-weight:bold; padding:0.5rem; cursor:pointer; color:#2e7d32;">Login</button>
-        <button onclick="showTab('signup')" style="flex:1; background:none; border:none; font-weight:bold; padding:0.5rem; cursor:pointer; color:#2e7d32;">Sign Up</button>
-      </div>
+  <canvas id="canvas" width="320" height="240"></canvas>
 
-      <!-- Login Form -->
+  <!-- Modal -->
+  <div id="loginModal" onclick="closeModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <span onclick="closeModal()" style="position:absolute; top:10px; right:15px; cursor:pointer; font-weight:bold; font-size:20px;">&times;</span>
       <div id="loginForm">
         <h3 style="color:#2e7d32;">Login</h3>
-        <input id="loginEmail" type="email" placeholder="Email" style="width:100%; padding:0.5rem; margin-bottom:0.5rem;" />
-        <input id="loginPassword" type="password" placeholder="Password" style="width:100%; padding:0.5rem; margin-bottom:0.5rem;" />
-        <button onclick="handleLogin()" style="background:#43a047; color:white; border:none; padding:0.6rem 1rem; border-radius:6px; cursor:pointer; width:100%;">Login</button>
+        <input id="loginEmail" type="email" placeholder="Email" />
+        <input id="loginPassword" type="password" placeholder="Password" />
+        <button onclick="handleLogin()">Login</button>
         <p id="loginError" style="color:red;"></p>
+        <p style="text-align:center;">Don't have an account? <a onclick="showTab('signup')">Sign Up</a></p>
       </div>
-
-      <!-- Signup Form -->
       <div id="signupForm" style="display:none;">
         <h3 style="color:#2e7d32;">Sign Up</h3>
-        <input id="signupEmail" type="email" placeholder="Email" style="width:100%; padding:0.5rem; margin-bottom:0.5rem;" />
-        <input id="signupPassword" type="password" placeholder="Password (min 6 chars)" style="width:100%; padding:0.5rem; margin-bottom:0.5rem;" />
-        <button onclick="handleSignup()" style="background:#43a047; color:white; border:none; padding:0.6rem 1rem; border-radius:6px; cursor:pointer; width:100%;">Sign Up</button>
+        <input id="signupEmail" type="email" placeholder="Email" />
+        <input id="signupPassword" type="password" placeholder="Password (min 6 chars)" />
+        <button onclick="handleSignup()">Sign Up</button>
         <p id="signupError" style="color:red;"></p>
+        <p style="text-align:center;">Already have an account? <a onclick="showTab('login')">Login</a></p>
       </div>
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer style="text-align:center; padding:1rem; background:#c8facc; color:#2e7d32;">
-    © 2025 GreenScan. All rights reserved.
-  </footer>
-
-  <!-- Script -->
   <script>
     function openLogin() {
       document.getElementById('loginModal').style.display = 'flex';
       showTab('login');
     }
-
+    function closeModal() {
+      document.getElementById('loginModal').style.display = 'none';
+    }
     function showTab(tab) {
       document.getElementById('loginForm').style.display = (tab === 'login') ? 'block' : 'none';
       document.getElementById('signupForm').style.display = (tab === 'signup') ? 'block' : 'none';
       document.getElementById('loginError').innerText = '';
       document.getElementById('signupError').innerText = '';
     }
-
     function handleSignup() {
       const email = document.getElementById('signupEmail').value;
       const password = document.getElementById('signupPassword').value;
-
       if (!email.endsWith('@gmail.com')) {
         document.getElementById('signupError').innerText = "Use a @gmail.com email.";
         return;
       }
-
       if (password.length < 6) {
         document.getElementById('signupError').innerText = "Password must be at least 6 characters.";
         return;
       }
-
       localStorage.setItem('userEmail', email);
       localStorage.setItem('userPassword', password);
       alert("Signup successful!");
-      document.getElementById('loginModal').style.display = 'none';
+      closeModal();
     }
-
     function handleLogin() {
       const email = document.getElementById('loginEmail').value;
       const password = document.getElementById('loginPassword').value;
-
       const savedEmail = localStorage.getItem('userEmail');
       const savedPassword = localStorage.getItem('userPassword');
-
       if (email === savedEmail && password === savedPassword) {
         alert("Login successful!");
-        document.getElementById('loginModal').style.display = 'none';
+        closeModal();
       } else {
         document.getElementById('loginError').innerText = "Invalid credentials.";
       }
     }
   </script>
-  <!-- ✅ Your custom script -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.21.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
