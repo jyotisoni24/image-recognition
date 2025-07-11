@@ -45,54 +45,6 @@ All in a beautiful, mobile-friendly interface.
 
 ---
 
-# 🌱 GreenScan – Sustainability Scanner
-
-Welcome to **GreenScan**!  
-A playful, AI-powered web app that helps you make greener choices, one scan at a time.
-
----
-
-## ✨ What is GreenScan?
-
-GreenScan lets you use your **webcam or phone camera** to instantly identify grocery and FMCG products.  
-It then shows you real-time info about each product’s:
-
-- **Carbon footprint**
-- **Recyclability**
-- **ESG (Environmental, Social, Governance) metrics**
-- **Eco badges, rewards, and more!**
-
-All in a beautiful, mobile-friendly interface.
-
----
-
-## 🚀 Features
-
-- **📸 Scan Products:**  
-  Use your camera to identify products using a custom Teachable Machine (TensorFlow.js) model.
-
-- **🌍 Sustainability Insights:**  
-  Instantly see carbon footprint, recyclability, and ESG scores for each scanned item.
-
-- **🏆 Earn Rewards:**  
-  Collect eco-points, badges, and track your green actions.
-
-- **🔒 User Accounts:**  
-  Simple login/signup and your own sustainable bills & rewards.
-
-- **✨ Fully Responsive:**  
-  Works smoothly on desktop and mobile.
-
----
-
-## 🛠️ Tech Stack
-
-- **HTML, CSS, JavaScript**
-- **TensorFlow.js & Teachable Machine**
-- **Custom sustainability database (JSON)**
-
----
-
 ## 🏅 Made for Walmart Sparkathon
 
 Built as a fun, impactful entry for the **Walmart Sparkathon 2025**.  
