@@ -44,7 +44,7 @@
 
 <body style="margin:0; font-family:'Segoe UI', sans-serif; background-color:#f4fff6; color:#222;">
 -->
-<!-- Navbar 
+  <!-- Navbar 
   <nav style="display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; background:#c8facc; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
     <div style="font-size:1.5rem; font-weight:bold; color:#2e7d32;">🌱 GreenScan</div>
     <ul style="list-style:none; display:flex; gap:1.5rem; margin:0; padding:0;">
@@ -56,7 +56,7 @@
     </ul>
   </nav>
 -->
-<!-- Hero Section 
+  <!-- Hero Section 
   <section style="padding:5rem 2rem; text-align:center; background:#e5fbe7;">
     <h1 style="font-size:3rem; margin-bottom:1rem; color:#1b5e20;">Welcome to GreenScan</h1>
     <p style="font-size:1.2rem; max-width:700px; margin:auto; color:#388e3c;">
@@ -67,7 +67,7 @@
     </a>
   </section>
 -->
-<!-- Get Started Section 
+  <!-- Get Started Section 
   <section style="padding:4rem 2rem; text-align:center; background:#f0fff4;">
     <h2 style="font-size:2rem; margin-bottom:1rem; color:#2e7d32;">Get Started Now</h2>
     <p style="font-size:1.1rem; max-width:600px; margin:auto; color:#4caf50;">
@@ -78,7 +78,7 @@
     </a>
   </section>
 -->
-<!-- How It Works Section 
+  <!-- How It Works Section 
   <section style="padding:4rem 2rem; background:#ffffff;">
     <h2 style="text-align:center; font-size:2rem; color:#2e7d32; margin-bottom:2rem;">How It Works</h2>
     <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:2rem; text-align:center;">
@@ -100,7 +100,7 @@
     </div>
   </section>
 -->
-<!-- About Section 
+  <!-- About Section 
   <section style="padding:4rem 2rem; background:#ffffff; text-align:center;">
     <h2 style="font-size:2.2rem; color:#2e7d32; margin-bottom:1rem;">About GreenScan</h2>
     <p style="font-size:1.1rem; max-width:700px; margin:auto; color:#4caf50; line-height:1.6;">
@@ -112,16 +112,16 @@
     </p>
   </section>
 -->
-<!-- Modal Trigger
+  <!-- Modal Trigger
   <button onclick="openLogin()" style="margin:2rem auto; display:block; background:#388e3c; color:white; border:none; padding:0.8rem 1.2rem; border-radius:6px; cursor:pointer;">Open Login / Signup</button>
 -->
-<!-- Login/Signup Modal 
+  <!-- Login/Signup Modal 
   <div id="loginModal"
        onclick="closeModal()"
        style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; 
               background:rgba(0,0,0,0.5); justify-content:center; align-items:center; z-index:1000;">
 -->
-<!-- Modal Content Box 
+    <!-- Modal Content Box 
     <div onclick="event.stopPropagation()"
          class="modal-content"
          style="background:white; padding:2rem; border-radius:10px; width:300px; position:relative;">
@@ -129,7 +129,7 @@
       <span onclick="closeModal()"
             style="position:absolute; top:10px; right:15px; cursor:pointer; font-weight:bold; font-size:20px;">&times;</span>
 -->
-<!-- Login Form 
+      <!-- Login Form 
       <div id="loginForm" style="display:block;">
         <h3 style="color:#2e7d32;">Login</h3>
         <input id="loginEmail" type="email" placeholder="Email" style="width:100%; padding:0.5rem; margin-bottom:0.5rem;" />
@@ -139,7 +139,7 @@
         <p style="text-align:center;">Don't have an account? <a href="#" onclick="showTab('signup')">Sign Up</a></p>
       </div>
 -->
-<!-- Signup Form 
+      <!-- Signup Form 
       <div id="signupForm" style="display:none;">
         <h3 style="color:#2e7d32;">Sign Up</h3>
         <input id="signupEmail" type="email" placeholder="Email" style="width:100%; padding:0.5rem; margin-bottom:0.5rem;" />
@@ -152,7 +152,7 @@
     </div>
   </div>
 -->
-<!-- Script 
+  <!-- Script 
   <script>
     function openLogin() {
       document.getElementById('loginModal').style.display = 'flex';
@@ -206,7 +206,7 @@
     }
   </script>
 -->
-<!-- Footer 
+  <!-- Footer 
   <footer style="text-align:center; padding:1rem; background:#c8facc; color:#2e7d32;">
     © 2025 GreenScan. All rights reserved.
   </footer>
@@ -421,557 +421,409 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>GreenScan | Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      :root {
-        --primary-green: #2e7d32;
-        --accent-green: #43a047;
-        --light-green: #c8facc;
-        --bg-green: #f4fff6;
-        --card-shadow: 0 4px 12px rgba(60, 180, 80, 0.08);
-      }
-
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        font-family: "Segoe UI", sans-serif;
-        background: var(--bg-green);
-        color: #222;
-        scroll-behavior: smooth;
-      }
-
-      body {
-        display: flex;
-        flex-direction: column;
-      }
-
-      main {
-        flex: 1;
-      }
-
-      nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        padding: 1rem 2rem;
-        background: var(--light-green);
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        width: 100%;
-      }
-
-      nav ul {
-        list-style: none;
-        display: flex;
-        gap: 1.5rem;
-        margin: 0;
-        padding: 0;
-        justify-content: center;
-        width: 100%;
-      }
-
-      nav a,
-      nav button {
-        text-decoration: none;
-        color: var(--primary-green);
-        font-weight: 500;
-        background: none;
-        border: none;
-        cursor: pointer;
-      }
-
-      nav button {
-        background: var(--accent-green);
-        color: white;
-        padding: 0.5rem 1rem;
-        border-radius: 6px;
-      }
-
-      .hero-section {
-        padding: 3rem 1rem;
-        text-align: center;
-        background: #e5fbe7;
-      }
-
-      .hero-section h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-        color: #1b5e20;
-      }
-
-      .hero-section p {
-        font-size: 1.2rem;
-        max-width: 700px;
-        margin: auto;
-        color: #388e3c;
-      }
-
-      .hero-section a {
-        display: inline-block;
-        margin-top: 2rem;
-        background: var(--accent-green);
-        color: white;
-        padding: 1rem 2rem;
-        text-decoration: none;
-        border-radius: 8px;
-        font-size: 1rem;
-        transition: background 0.2s;
-      }
-
-      .hero-section a:hover {
-        background: #388e3c;
-      }
-
-      .video-section {
-        width: 100%;
-        background-color: #ffffff;
-        padding: 3rem 1rem;
-        display: flex;
-        justify-content: center;
-      }
-
-      .video-wrapper {
-        width: 100%;
-        max-width: 960px;
-        aspect-ratio: 16/9;
-        border-radius: 16px;
-        overflow: hidden;
-        box-shadow: var(--card-shadow);
-        background: #000;
-        border: 4px solid #a5d6a7;
-      }
-
-      .video-wrapper video {
-        width: 100%;
-        height: 100%;
-        display: block;
-      }
-
-      .get-started-section {
-        padding: 2.5rem 1rem;
-        text-align: center;
-        background: #f0fff4;
-      }
-
-      .get-started-section h2 {
-        font-size: 1.5rem;
-        color: #1b5e20;
-        margin-bottom: 1rem;
-      }
-
-      .get-started-section p {
-        font-size: 1.1rem;
-        max-width: 600px;
-        margin: auto;
-        color: #4caf50;
-      }
-
-      .get-started-section a {
-        display: inline-block;
-        margin-top: 2rem;
-        background: #66bb6a;
-        color: white;
-        padding: 0.8rem 1.5rem;
-        text-decoration: none;
-        border-radius: 8px;
-        font-size: 1rem;
-        transition: background 0.2s;
-      }
-
-      .get-started-section a:hover {
-        background: #388e3c;
-      }
-
-      .how-section {
-        padding: 2rem 1rem;
-        text-align: center;
-        background: #ffffff;
-      }
-
-      .how-section h2 {
-        font-size: 1.5rem;
-        color: #1b5e20;
-        margin-bottom: 2rem;
-      }
-
+<head>
+  <meta charset="UTF-8" />
+  <title>GreenScan | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --primary-green: #2e7d32;
+      --accent-green: #43a047;
+      --light-green: #c8facc;
+      --bg-green: #f4fff6;
+      --card-shadow: 0 4px 12px rgba(60,180,80,0.08);
+    }
+    html, body {
+      min-height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg-green);
+      color: #222;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: var(--light-green);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+    nav a, nav button {
+      text-decoration: none;
+      color: var(--primary-green);
+      font-weight: 500;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    nav button {
+      background: var(--accent-green);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+    }
+    .hero-section {
+      padding: 3rem 1rem;
+      text-align: center;
+      background: #e5fbe7;
+    }
+    .hero-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #1b5e20;
+    }
+    .hero-section p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+      color: #388e3c;
+    }
+    .hero-section a {
+      display: inline-block;
+      margin-top: 2rem;
+      background: var(--accent-green);
+      color: white;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: background 0.2s;
+    }
+    .hero-section a:hover {
+      background: #388e3c;
+    }
+    .get-started-section {
+      padding: 2.5rem 1rem;
+      text-align: center;
+      background: #f0fff4;
+    }
+    .get-started-section h2 {
+      font-size: 1.5rem;
+      color: #1b5e20;
+      margin-bottom: 1rem;
+    }
+    .get-started-section p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: auto;
+      color: #4caf50;
+    }
+    .get-started-section a {
+      display: inline-block;
+      margin-top: 2rem;
+      background: #66bb6a;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: background 0.2s;
+    }
+    .get-started-section a:hover {
+      background: #388e3c;
+    }
+    .how-section {
+      padding: 2rem 1rem;
+      text-align: center;
+      background: #ffffff;
+    }
+    .how-section h2 {
+      font-size: 1.5rem;
+      color: #1b5e20;
+      margin-bottom: 2rem;
+    }
+    .how-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .green-card {
+      background: #ffffff;
+      border-left: 6px solid #66bb6a;
+      border-radius: 10px;
+      box-shadow: var(--card-shadow);
+      padding: 1.5rem;
+      width: 260px;
+      text-align: left;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .green-card h3 {
+      margin-top: 0.5rem;
+      color: #2e7d32;
+      font-size: 1.1rem;
+    }
+    .green-card div {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .about-section {
+      padding: 2.5rem 1rem;
+      background: #fff;
+      text-align: center;
+    }
+    .about-section h2 {
+      font-size: 1.5rem;
+      color: #1b5e20;
+      margin-bottom: 1rem;
+    }
+    .about-section p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: auto;
+      color: #4caf50;
+      line-height: 1.6;
+    }
+    .login-btn-bottom {
+      display: flex;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+    .login-btn-bottom button {
+      background: #43a047;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .login-btn-bottom button:hover {
+      background: #388e3c;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: var(--light-green);
+      color: var(--primary-green);
+      margin-top: 2rem;
+    }
+    /* Modal styles */
+    #loginModal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .modal-content {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      width: 300px;
+      position: relative;
+    }
+    .modal-content input {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .modal-content button {
+      background: #43a047;
+      color: white;
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+    }
+    .modal-content a {
+      color: #2e7d32;
+      cursor: pointer;
+    }
+    @media (max-width: 900px) {
       .how-cards {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 2rem;
-      }
-
-      .green-card {
-        background: #ffffff;
-        border-left: 6px solid #66bb6a;
-        border-radius: 10px;
-        box-shadow: var(--card-shadow);
-        padding: 1.5rem;
-        width: 260px;
-        text-align: left;
-        margin: 0 auto;
-        font-size: 1.1rem;
-        color: #222;
-        display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
       }
-
-      .green-card h3 {
-        margin-top: 0.5rem;
-        color: #2e7d32;
-        font-size: 1.1rem;
+      .green-card {
+        width: 96vw !important;
+        max-width: 98vw !important;
+        padding: 10px !important;
+        font-size: 0.98em !important;
       }
-
-      .green-card div {
-        font-size: 2.5rem;
-        margin-bottom: 0.5rem;
-      }
-
-      .about-section {
-        padding: 2.5rem 1rem;
-        background: #fff;
-        text-align: center;
-      }
-
-      .about-section h2 {
-        font-size: 1.5rem;
-        color: #1b5e20;
-        margin-bottom: 1rem;
-      }
-
-      .about-section p {
-        font-size: 1.1rem;
-        max-width: 700px;
-        margin: auto;
-        color: #4caf50;
-        line-height: 1.6;
-      }
-
-      .login-btn-bottom {
-        display: flex;
-        justify-content: center;
-        margin: 2rem 0;
-      }
-
-      .login-btn-bottom button {
-        background: #43a047;
-        color: white;
-        border: none;
-        padding: 1rem 2rem;
-        border-radius: 8px;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: background 0.2s;
-      }
-
-      .login-btn-bottom button:hover {
-        background: #388e3c;
-      }
-
-      footer {
-        text-align: center;
+    }
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
         padding: 1rem;
-        background: var(--light-green);
-        color: var(--primary-green);
-        margin-top: auto;
       }
-
-      /* Modal styles */
-      #loginModal {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.5);
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
       }
-
-      .modal-content {
-        background: white;
-        padding: 2rem;
-        border-radius: 10px;
-        width: 300px;
-        position: relative;
-      }
-      .logo {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
+      .hero-section h1 {
         font-size: 1.5rem;
-        font-weight: bold;
-        color: var(--primary-green);
       }
-
-      .logo img {
-        height: 70px;
-        width: auto;
-        border-radius: 6px;
+      .how-section h2,
+      .get-started-section h2,
+      .about-section h2 {
+        font-size: 1.1rem;
       }
-
-      .modal-content input {
-        width: 100%;
-        padding: 0.5rem;
-        margin-bottom: 0.5rem;
+      .about-section p {
+        font-size: 0.97em;
+        padding: 0 0.5rem;
       }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div style="font-size:1.5rem; font-weight:bold; color:#2e7d32;">🌱 GreenScan</div>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="index.html">Sustainability Scanner</a></li>
+      <li><a href="rewards.html">My Rewards</a></li>
+      <li><a href="bills.html">My Bills</a></li>
+      <li><button onclick="openLogin()">Login / Sign Up</button></li>
+    </ul>
+  </nav>
 
-      .modal-content button {
-        background: #43a047;
-        color: white;
-        border: none;
-        padding: 0.6rem 1rem;
-        border-radius: 6px;
-        cursor: pointer;
-        width: 100%;
-      }
+  <section class="hero-section">
+    <h1>Welcome to GreenScan</h1>
+    <p>
+      Your one-stop tool to track and reduce your carbon footprint. Make greener choices, earn rewards, and build a sustainable lifestyle.
+    </p>
+    <a href="index.html">Start Scanning</a>
+  </section>
 
-      .modal-content a {
-        color: #2e7d32;
-        cursor: pointer;
-      }
+  <section class="get-started-section">
+    <h2>Get Started Now</h2>
+    <p>
+      Ready to begin your sustainability journey? Click below to explore how your daily choices impact the planet and start earning eco-points today!
+    </p>
+    <a href="rewards.html">Get Started</a>
+  </section>
 
-      /* Responsive */
-      @media (max-width: 900px) {
-        .how-cards {
-          flex-direction: column;
-          align-items: center;
-          gap: 1rem;
-        }
-
-        .green-card {
-          width: 90vw;
-          font-size: 1em;
-          padding: 1rem;
-        }
-      }
-
-      @media (max-width: 600px) {
-        nav {
-          flex-direction: column;
-          align-items: center;
-          padding: 1rem;
-        }
-
-        nav ul {
-          flex-direction: column;
-          gap: 1rem;
-          align-items: center;
-          margin-top: 1rem;
-          width: 100%;
-          padding: 0;
-        }
-
-        nav ul li {
-          width: 100%;
-          text-align: center;
-        }
-
-        nav button {
-          width: auto;
-          padding: 0.6rem 1.2rem;
-        }
-
-        .hero-section h1 {
-          font-size: 1.8rem;
-        }
-
-        .hero-section p {
-          font-size: 1rem;
-        }
-
-        .green-card {
-          font-size: 0.95em;
-        }
-
-        .video-wrapper {
-          max-width: 100%;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <nav>
-      <div class="logo">
-        <img src="logo.png" alt="GreenScan Logo" />
+  <section class="how-section">
+    <h2>How It Works</h2>
+    <div class="how-cards">
+      <div class="green-card">
+        <div>📸</div>
+        <h3>1. Scan Product</h3>
+        <p>Point your camera and capture the product to get details instantly.</p>
       </div>
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="index.html">Sustainability Scanner</a></li>
-        <li><a href="rewards.html">My Rewards</a></li>
-        <li><a href="bills.html">My Bills</a></li>
-        <li><button onclick="openLogin()">Login / Sign Up</button></li>
-      </ul>
-    </nav>
-
-    <section class="hero-section">
-      <h1>Welcome to GreenScan</h1>
-      <p>
-        Your one-stop tool to track and reduce your carbon footprint. Make
-        greener choices, earn rewards, and build a sustainable lifestyle.
-      </p>
-      <a href="index.html">Start Scanning</a>
-    </section>
-
-    <section class="get-started-section">
-      <h2>Get Started Now</h2>
-      <p>
-        Ready to begin your sustainability journey? Click below to explore how
-        your daily choices impact the planet and start earning eco-points today!
-      </p>
-      <a href="rewards.html">Get Started</a>
-    </section>
-
-    <section class="how-section">
-      <h2>How It Works</h2>
-      <div class="how-cards">
-        <div class="green-card">
-          <div>📸</div>
-          <h3>1. Scan Product</h3>
-          <p>
-            Point your camera and capture the product to get details instantly.
-          </p>
-        </div>
-        <div class="green-card">
-          <div>📊</div>
-          <h3>2. Analyze Impact</h3>
-          <p>
-            Get real-time insights like carbon emissions & sustainability score.
-          </p>
-        </div>
-        <div class="green-card">
-          <div>🏆</div>
-          <h3>3. Earn Rewards</h3>
-          <p>Track your green actions and earn eco-points and badges.</p>
-        </div>
+      <div class="green-card">
+        <div>📊</div>
+        <h3>2. Analyze Impact</h3>
+        <p>Get real-time insights like carbon emissions & sustainability score.</p>
       </div>
-    </section>
-
-    <section class="about-section">
-      <h2>About GreenScan</h2>
-      <p>
-        GreenScan is on a mission to make sustainability simple, accessible, and
-        rewarding. We empower conscious consumers by providing instant
-        environmental insights for everyday products.<br /><br />
-        Our platform analyzes items in real-time to reveal their carbon
-        footprint, sustainability scores, and overall eco-impact—helping you
-        shop smarter and greener.<br /><br />
-        Whether you're reducing waste, tracking emissions, or just starting
-        out—GreenScan makes your green journey effortless and rewarding.
-      </p>
-    </section>
-
-    <!-- Prominent Login/Signup Button Below Content -->
-    <div class="login-btn-bottom">
-      <button onclick="openLogin()">Open Login / Signup</button>
-    </div>
-
-    <!-- Login/Signup Modal -->
-    <div id="loginModal" onclick="closeModal()">
-      <div onclick="event.stopPropagation()" class="modal-content">
-        <span
-          onclick="closeModal()"
-          style="
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 20px;
-          "
-          >&times;</span
-        >
-        <div id="loginForm" style="display: block;">
-          <h3 style="color: #2e7d32;">Login</h3>
-          <input id="loginEmail" type="email" placeholder="Email" />
-          <input id="loginPassword" type="password" placeholder="Password" />
-          <button onclick="handleLogin()">Login</button>
-          <p id="loginError" style="color: red;"></p>
-          <p style="text-align: center;">
-            Don't have an account?
-            <a href="#" onclick="showTab('signup')">Sign Up</a>
-          </p>
-        </div>
-        <div id="signupForm" style="display: none;">
-          <h3 style="color: #2e7d32;">Sign Up</h3>
-          <input id="signupEmail" type="email" placeholder="Email" />
-          <input
-            id="signupPassword"
-            type="password"
-            placeholder="Password (min 6 chars)"
-          />
-          <button onclick="handleSignup()">Sign Up</button>
-          <p id="signupError" style="color: red;"></p>
-          <p style="text-align: center;">
-            Already have an account?
-            <a href="#" onclick="showTab('login')">Login</a>
-          </p>
-        </div>
+      <div class="green-card">
+        <div>🏆</div>
+        <h3>3. Earn Rewards</h3>
+        <p>Track your green actions and earn eco-points and badges.</p>
       </div>
     </div>
+  </section>
 
-    <footer>
-      © 2025 GreenScan. All rights reserved.
-    </footer>
+  <section class="about-section">
+    <h2>About GreenScan</h2>
+    <p>
+      GreenScan is on a mission to make sustainability simple, accessible, and rewarding. We empower conscious consumers by providing instant environmental insights for everyday products.<br><br>
+      Our platform analyzes items in real-time to reveal their carbon footprint, sustainability scores, and overall eco-impact—helping you shop smarter and greener.<br><br>
+      Whether you're reducing waste, tracking emissions, or just starting out—GreenScan makes your green journey effortless and rewarding.
+    </p>
+  </section>
 
-    <script>
-      function openLogin() {
-        document.getElementById("loginModal").style.display = "flex";
-        showTab("login");
+  <!-- Prominent Login/Signup Button Below Content -->
+  <div class="login-btn-bottom">
+    <button onclick="openLogin()">Open Login / Signup</button>
+  </div>
+
+  <!-- Login/Signup Modal -->
+  <div id="loginModal"
+       onclick="closeModal()">
+    <div onclick="event.stopPropagation()" class="modal-content">
+      <span onclick="closeModal()" style="position:absolute; top:10px; right:15px; cursor:pointer; font-weight:bold; font-size:20px;">&times;</span>
+      <div id="loginForm" style="display:block;">
+        <h3 style="color:#2e7d32;">Login</h3>
+        <input id="loginEmail" type="email" placeholder="Email" />
+        <input id="loginPassword" type="password" placeholder="Password" />
+        <button onclick="handleLogin()">Login</button>
+        <p id="loginError" style="color:red;"></p>
+        <p style="text-align:center;">Don't have an account?
+          <a href="#" onclick="showTab('signup')">Sign Up</a></p>
+      </div>
+      <div id="signupForm" style="display:none;">
+        <h3 style="color:#2e7d32;">Sign Up</h3>
+        <input id="signupEmail" type="email" placeholder="Email" />
+        <input id="signupPassword" type="password" placeholder="Password (min 6 chars)" />
+        <button onclick="handleSignup()">Sign Up</button>
+        <p id="signupError" style="color:red;"></p>
+        <p style="text-align:center;">Already have an account?
+          <a href="#" onclick="showTab('login')">Login</a></p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 GreenScan. All rights reserved.
+  </footer>
+
+  <script>
+    function openLogin() {
+      document.getElementById('loginModal').style.display = 'flex';
+      showTab('login');
+    }
+    function closeModal() {
+      document.getElementById('loginModal').style.display = 'none';
+    }
+    function showTab(tab) {
+      document.getElementById('loginForm').style.display = (tab === 'login') ? 'block' : 'none';
+      document.getElementById('signupForm').style.display = (tab === 'signup') ? 'block' : 'none';
+      document.getElementById('loginError').innerText = '';
+      document.getElementById('signupError').innerText = '';
+    }
+    function handleSignup() {
+      const email = document.getElementById('signupEmail').value;
+      const password = document.getElementById('signupPassword').value;
+      if (!email.endsWith('@gmail.com')) {
+        document.getElementById('signupError').innerText = "Use a @gmail.com email.";
+        return;
       }
-      function closeModal() {
-        document.getElementById("loginModal").style.display = "none";
+      if (password.length < 6) {
+        document.getElementById('signupError').innerText = "Password must be at least 6 characters.";
+        return;
       }
-      function showTab(tab) {
-        document.getElementById("loginForm").style.display =
-          tab === "login" ? "block" : "none";
-        document.getElementById("signupForm").style.display =
-          tab === "signup" ? "block" : "none";
-        document.getElementById("loginError").innerText = "";
-        document.getElementById("signupError").innerText = "";
-      }
-      function handleSignup() {
-        const email = document.getElementById("signupEmail").value;
-        const password = document.getElementById("signupPassword").value;
-        if (!email.endsWith("@gmail.com")) {
-          document.getElementById("signupError").innerText =
-            "Use a @gmail.com email.";
-          return;
-        }
-        if (password.length < 6) {
-          document.getElementById("signupError").innerText =
-            "Password must be at least 6 characters.";
-          return;
-        }
-        localStorage.setItem("userEmail", email);
-        localStorage.setItem("userPassword", password);
-        alert("Signup successful!");
+      localStorage.setItem('userEmail', email);
+      localStorage.setItem('userPassword', password);
+      alert("Signup successful!");
+      closeModal();
+    }
+    function handleLogin() {
+      const email = document.getElementById('loginEmail').value;
+      const password = document.getElementById('loginPassword').value;
+      const savedEmail = localStorage.getItem('userEmail');
+      const savedPassword = localStorage.getItem('userPassword');
+      if (email === savedEmail && password === savedPassword) {
+        alert("Login successful!");
         closeModal();
+      } else {
+        document.getElementById('loginError').innerText = "Invalid credentials.";
       }
-      function handleLogin() {
-        const email = document.getElementById("loginEmail").value;
-        const password = document.getElementById("loginPassword").value;
-        const savedEmail = localStorage.getItem("userEmail");
-        const savedPassword = localStorage.getItem("userPassword");
-        if (email === savedEmail && password === savedPassword) {
-          alert("Login successful!");
-          closeModal();
-        } else {
-          document.getElementById("loginError").innerText =
-            "Invalid credentials.";
-        }
-      }
-    </script>
-  </body>
+    }
+  </script>
+</body>
 </html>
