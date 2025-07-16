@@ -1,13 +1,13 @@
-# 🌱 GreenScan – Sustainability Scanner
+# 🌱 ShelfPro – Sustainability Scanner
 
-Welcome to **GreenScan**!  
+Welcome to **ShelfPro**!  
 AI-powered web app that helps you make greener choices, one scan at a time.
 
 ---
 
-## ✨ What is GreenScan?
+## ✨ What is ShelfPro?
 
-GreenScan lets you use your **webcam or phone camera** to instantly identify grocery and FMCG products.  
+ShelfPro lets you use your **webcam or phone camera** to instantly identify grocery and FMCG products.  
 It then shows you real-time info about each product’s:
 
 - **Carbon footprint**
